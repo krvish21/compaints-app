@@ -7,37 +7,40 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#fdf2f8',
-          100: '#fce7f3',
-          200: '#fbcfe8',
-          300: '#f9a8d4',
-          400: '#f472b6',
-          500: '#ec4899',
-          600: '#db2777',
-          700: '#be185d',
-          800: '#9d174d',
-          900: '#831843',
+        romance: {
+          50: '#fdf8f8',
+          100: '#fae7e7',
+          200: '#f5d0d0',
+          300: '#ebadb0',
+          400: '#e07e84',
+          500: '#d65d65',
+          600: '#c33e47',
+          700: '#a32f37',
+          800: '#862b32',
+          900: '#712830',
         },
-        secondary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-        },
+        muted: {
+          50: '#f8f9fa',
+          100: '#f1f3f5',
+          200: '#e9ecef',
+          300: '#dee2e6',
+          400: '#ced4da',
+          500: '#adb5bd',
+          600: '#868e96',
+          700: '#495057',
+          800: '#343a40',
+          900: '#212529',
+        }
       },
-      gradientColorStops: theme => ({
-        ...theme('colors'),
-      }),
-      backgroundImage: {
-        'gradient-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
+      animation: {
+        'scratch': 'scratch 0.5s ease-out forwards',
       },
+      keyframes: {
+        scratch: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        }
+      }
     },
   },
   plugins: [],
